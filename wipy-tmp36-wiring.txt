@@ -1,0 +1,28 @@
+#
+# Created with ASCIIFlow tool at https://asciiflow.com/
+#
+# Essentially connect the battery to the Vcc and Gnd on Wipy.
+# TMP36 sensor gets its input from Bat- and Wipy 3v3.
+# Connect the output of TMP36 to GP3 on Wipy.
+# NOTE: The output of TMP36 can be higher than the max. analog input of Wipy
+#       It's adviced to put in a voltage divider between the output
+#           of TMP36 and the GP3 pin on Wipy.
+#
+
++-----------------+                +----------------------+
+|            Vcc  +----------------+ +                    |
+|                 |                |                      |
+|            Gnd  +--------------+ |    Battery 3.7V      |
+|                 |              | |                      |
+|            3V3  +--------+     +-+ -                    |
+| Wipy v1.3       |        |     | +----------------------+
+|                 |        |     +--------------------------+
+|                 |        |       +----------------------+ |
+|                 |        +-------+ +                    | |
+|                 |                |                      | |
+|            GP3  +----------------+ Out     TMP36        | |
+|                 |                |                      | |
++-----------------+              +-+ -                    | |
+                                 | +----------------------+ |
+                                 |                          |
+                                 +--------------------------+
